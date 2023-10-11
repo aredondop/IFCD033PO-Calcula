@@ -14,7 +14,8 @@ public class Calcula {
     public static void main(String[] args) {
         
         int miNumero = 5;
-        int miFactorial = calcularFactorial(miNumero);
+        //int miFactorial = calcularFactorial(miNumero);
+        int miFactorial = calcularFactorialRecursiva(miNumero);
         
         System.out.println("El factorial de "+ miNumero + " es " + miFactorial);
         System.out.println("Los alumnos de este curso aprenden Programación en JAVA");
@@ -28,5 +29,11 @@ public class Calcula {
         }
         
         return factorial;
+    }
+    
+    public static int calcularFactorialRecursiva( int numero){
+        
+        return (numero == 0 || numero == 1) ? 1 : numero * calcularFactorialRecursiva( numero - 1);
+       
     }
 }
